@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>dental</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>  
+  <servlet>
+    <servlet-name>httpGW</servlet-name>
+    <servlet-class>mxc.dental.gw.httpGW</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>postGW</servlet-name>
+    <servlet-class>mxc.dental.gw.postGW</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>imageUpload</servlet-name>
+    <servlet-class>voltam.wildfire.servlet.ImageReceiver</servlet-class>
+  </servlet>    
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>401</error-code>
+    <location>/error401.jsp</location>
+  </error-page>
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
+</web-app>
